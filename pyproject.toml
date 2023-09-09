@@ -1,0 +1,68 @@
+[tool.poetry]
+name = "python-poetry-starter"
+version = "0.1.0"
+description = "Starter boilerplate for poetry python project with pre-commit hooks"
+authors = ["Sam Stha <sthasam2@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{ include = "python_poetry_starter" }]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "22.3.0"
+flake8 = "6.1.0"
+flake8-bugbear = "^23.7.10"
+flake8-comprehensions = "^3.14.0"
+flake8-implicit-str-concat = "^0.4.0"
+flake8-bandit = "^4.1.1"
+flake8-eradicate = "^1.5.0"
+flake8-print = "^5.0.0"
+isort = "^5.12.0"
+mypy = "^1.5.1"
+pycodestyle = "2.11.0"
+pep8-naming = "^0.13.3"
+pre-commit = "^3.4.0"
+pre-commit-hooks = "^4.4.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.black]
+line-length = 88
+target-version = ['py39']
+include = '\.pyi?$'
+exclude = '''
+    /(
+        \.git
+      | \.hg
+      | \.mypy_cache
+      | \.tox
+      | \.venv
+      | _build
+      | buck-out
+      | build
+      | dist
+      | migrations
+
+      # The following are specific to Black, you probably don't want those.
+      | blib2to3
+      | tests/data
+    )/
+    '''
+
+[tool.flake8]
+max-line-length = 88
+
+
+[tool.isort]
+profile = 'black'
+
+
+[tool.mypy]
+plugins = []

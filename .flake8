@@ -1,0 +1,52 @@
+# Error codes: 
+# `pycodestyle` - Exxx, Wxxx
+# `pyflakes` - Fxxx
+# `mccabe` - C901
+# website: https://www.flake8rules.com/
+[flake8]
+
+max-line-length = 88
+
+# uses mccabe complexity checker
+# (https://pypi.org/project/mccabe/)
+max-complexity = 10
+
+exclude =
+    # migration fioles
+    **/migrations/*.py,
+    # collect static files
+    */statics
+
+ignore =
+    # E501: line too long
+    E501
+
+
+per-file-ignores =
+    # F401: imported but unused
+    # example, **/admin.py:F401
+    main.py:T201
+
+## extensions
+plugins =
+    # code enhancements, bug checks, design problems
+    # Error codes: Bxxx, website: https://github.com/PyCQA/flake8-bugbear
+    flake8-bugbear,
+    # improve comprehensions
+    # Error codes: Cxxx, website: https://github.com/adamchainz/flake8-comprehensions
+    flake8-comprehensions,
+    # check erroneous string concats potentially caused by formatting
+    # Error codes: ISCxxx, website: https://github.com/flake8-implicit-str-concat/flake8-implicit-str-concat
+    flake8-implicit-str-concat,
+    # namimg standards
+    # Error codes: Nxxx, website: https://github.com/PyCQA/pep8-naming
+    pep8-naming,
+    # check for security issues
+    # Error codes: Sxxx, website: https://bandit.readthedocs.io/en/latest/plugins/index.html#complete-test-plugin-listing
+    flake8-bandit,
+    # commented out codes
+    # Error codes: E800, website: https://github.com/wemake-services/flake8-eradicate
+    flake8-eradicate,
+    # check for print statements
+    # Error codes: Txxx, website: https://github.com/jbkahn/flake8-print
+    flake8-print

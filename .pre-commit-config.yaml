@@ -1,0 +1,70 @@
+repos:
+  - repo: local
+    hooks:
+      - id: trailing-whitespace
+        name: Remove Trailing Whitespace
+        entry: python
+        language: system
+        types: [python]
+        args: ["-m", "pre_commit_hooks.trailing_whitespace_fixer"]
+        files: \.(py|rst|md|txt)$
+
+      - id: debug-statements
+        name: Check for Debug Statements
+        entry: python
+        language: system
+        types: [python]
+        args: ["-m", "pre_commit_hooks.debug_statement_hook"]
+        files: \.py$
+
+      - id: requirements-txt-fixer
+        name: Fix Requirements.txt Formatting
+        entry: python
+        language: system
+        types: [python]
+        args: ["-m", "pre_commit_hooks.requirements_txt_fixer"]
+        files: requirements.txt
+
+      - id: isort
+        name: Check and Fix Imports with isort
+        entry: isort
+        language: system
+        types: [python]
+        args: []
+        exclude: migrations
+
+      - id: black
+        name: Format Code with Black
+        entry: black
+        language: system
+        types: [python]
+        args: ["--line-length=88"]
+        exclude: migrations
+
+      - id: mypy
+        name: Check Code with Mypy
+        entry: mypy
+        # # language python creates a virtualenv named mypy_cache
+        # language: python
+        language: system
+        types: [python]
+        exclude: ".venv"
+        # # enabling additional dependiencies locally
+        # # requires specifying language: python
+        # # doing so installs mypy in a virtualenv named mypy_cache
+        # # and all the project dependencies is required to be specified
+        # # it causes additional overhead and is not recommended
+        # additional_dependencies:
+        #   - <example_dependency>
+
+      - id: flake8
+        name: Check Code with Flake8
+        entry: flake8
+        language: system
+        args:
+          [
+            "--max-line-length=88",
+            "--color=always",
+            "--format=%(cyan)s%(path)s%(reset)s:%(yellow)s%(bold)s%(row)d%(reset)s%(reset)s:%(green)s%(bold)s%(col)d%(reset)s%(reset)s: %(red)s%(bold)s%(code)s%(reset)s%(reset)s %(text)s",
+          ]
+        types: [python]
