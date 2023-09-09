@@ -43,18 +43,18 @@ It uses the installed pre-commit hooks described in the configuration file `.pre
 
 ### Available hooks
 
-[x] [pre-commit-hooks](https://github.com/pre-commit/pre-commit-hooks)  
-    - [x] trailing_whitespace_fixer  
-    - [x] debug_statement_hook  
-    - [x] requirements_txt_fixer  
-[x] [black](https://github.com/psf/black)  
-[x] [isort](https://github.com/timothycrosley/isort)  
-[x] [mypy](https://github.com/python/mypy)  
-[x] [flake8](https://github.com/pycqa/flake8)  
-    - [x] [flake8-bugbear](https://github.com/PyCQA/flake8-bugbear)  
-    - [x] [flake8-comprehensions](https://github.com/adamchainz/flake8-comprehensions)  
-    - [x] [flake8-implicit-str-concat](https://github.com/flake8-implicit-str-concat/flake8-implicit-str-concat)  
-    - [x] [pep8-naming](https://github.com/PyCQA/pep8-naming)  
-    - [x] [flake8-bandit](https://bandit.readthedocs.io/en/latest/plugins/index.html#complete-test-plugin-listing)  
-    - [x] [flake8-eradicate](https://github.com/wemake-services/flake8-eradicate)  
-    - [x] [flake8-print](https://github.com/jbkahn/flake8-print)  
+[ x ] [pre-commit-hooks](https://github.com/pre-commit/pre-commit-hooks)  
+    - [ x ] trailing_whitespace_fixer  
+    - [ x ] debug_statement_hook  
+    - [ x ] requirements_txt_fixer  
+[ x ] [black](https://github.com/psf/black)  
+[ x ] [isort](https://github.com/timothycrosley/isort)  
+[ x ] [mypy](https://github.com/python/mypy)  
+[ x ] [flake8](https://github.com/pycqa/flake8)  
+    - [ x ] [flake8-bugbear](https://github.com/PyCQA/flake8-bugbear)  
+    - [ x ] [flake8-comprehensions](https://github.com/adamchainz/flake8-comprehensions)  
+    - [ x ] [flake8-implicit-str-concat](https://github.com/flake8-implicit-str-concat/flake8-implicit-str-concat)  
+    - [ x ] [pep8-naming](https://github.com/PyCQA/pep8-naming)  
+    - [ x ] [flake8-bandit](https://bandit.readthedocs.io/en/latest/plugins/index.html#complete-test-plugin-listing)  
+    - [ x ] [flake8-eradicate](https://github.com/wemake-services/flake8-eradicate)  
+    - [ x ] [flake8-print](https://github.com/jbkahn/flake8-print)  
